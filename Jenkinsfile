@@ -6,20 +6,20 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t student-management .'
+                sh 'docker build -t student-management .'
             }
         }
 
         stage('Stop Old Container') {
             steps {
-                bat 'docker stop student-container || exit 0'
-                bat 'docker rm student-container || exit 0'
+                sh 'docker stop student-container || true'
+                sh 'docker rm student-container || true'
             }
         }
 
         stage('Run New Container') {
             steps {
-                bat 'docker run -d -p 5000:5000 --name student-container student-management'
+                sh 'docker run -d -p 5000:5000 --name student-container student-management'
             }
         }
 
