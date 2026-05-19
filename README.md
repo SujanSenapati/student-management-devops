@@ -20,7 +20,7 @@ The Student Management System is a web application built using Flask and SQLAlch
 ## Installation
 1. Clone the repository or download the source code.
 
-    git clone https://github.com/LoydNgei/Student_Management_System
+    git clone 
 
 2. Make sure you have Python installed (version 3.6 or higher).
 
